@@ -1,20 +1,11 @@
 import { Component } from '@angular/core';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { CostoTotalComponent } from '../../shared/ui/costo-total/costo-total.component';
 @Component({
   selector: 'app-gastos',
   standalone: true,
-  imports: [
-    MatSlideToggleModule,
-    MatFormFieldModule, 
-    MatInputModule,
-    MatIconModule],
+  imports: [MatGridListModule, CostoTotalComponent],
   templateUrl: './gastos.component.html',
-  styleUrl: './gastos.component.css'
+  styleUrl: './gastos.component.css',
 })
-export class GastosComponent {
-
-}
+export class GastosComponent {}
