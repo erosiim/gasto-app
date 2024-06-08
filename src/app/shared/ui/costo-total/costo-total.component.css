@@ -7,9 +7,10 @@ mat-card {
     top: 10px;
 }
 
-.card-total {
+.card-contenido {
     font-size: 1rem;
     align-items: center;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
+    height: 100%;
 }
