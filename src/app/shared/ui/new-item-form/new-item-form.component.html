@@ -3,8 +3,40 @@
   <p>
     <mat-form-field appearance="outline">
       <mat-label>Artículo</mat-label>
-      <input matInput placeholder="Ej  jabón zote">
+      <input matInput placeholder="Ej  jabón zote" required>
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo compra</mat-label>
+      <mat-select required>
+        <mat-option value="u">Unidad</mat-option>
+        <mat-option value="kg">Kilo</mat-option>
+      </mat-select>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Cantidad</mat-label>
+      <input matInput type="number" placeholder="1 / .100 " required>
+      <span matTextSuffix>kg&nbsp;</span>
+      <span matTextSuffix>u&nbsp;</span>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Precio</mat-label>
+      <input matInput placeholder="25.00" required>
+      <span matTextPrefix>$&nbsp;</span>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Total</mat-label>
+      <input matInput readonly>
+      <span matTextPrefix>$&nbsp;</span>
     </mat-form-field>
   </p>
 </mat-dialog-content>
