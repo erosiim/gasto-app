@@ -1,16 +1,17 @@
 <h2 mat-dialog-title>Nuevo item</h2>
 <mat-dialog-content>
+  <form [formGroup]="itemForm">
   <p>
     <mat-form-field appearance="outline">
       <mat-label>Artículo</mat-label>
-      <input matInput placeholder="Ej  jabón zote" required>
+      <input matInput placeholder="Ej  jabón zote" type="text" formControlName="itemName" required>
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="outline">
       <mat-label>Tipo compra</mat-label>
-      <mat-select required>
+      <mat-select required type="text" formControlName="typeOfItem">
         <mat-option value="u">Unidad</mat-option>
         <mat-option value="kg">Kilo</mat-option>
       </mat-select>
@@ -20,7 +21,7 @@
   <p>
     <mat-form-field appearance="outline">
       <mat-label>Cantidad</mat-label>
-      <input matInput type="number" placeholder="1 / .100 " required>
+      <input matInput type="number" placeholder="1 / .100 " type="number" formControlName="quantityOfItem" required>
       <span matTextSuffix>kg&nbsp;</span>
       <span matTextSuffix>u&nbsp;</span>
     </mat-form-field>
@@ -28,18 +29,20 @@
   <p>
     <mat-form-field appearance="outline">
       <mat-label>Precio</mat-label>
-      <input matInput placeholder="25.00" required>
+      <input matInput placeholder="25.00" type="number" formControlName="itemPrice" required>
       <span matTextPrefix>$&nbsp;</span>
     </mat-form-field>
   </p>
   <p>
     <mat-form-field appearance="outline">
       <mat-label>Total</mat-label>
-      <input matInput readonly>
+      <input matInput readonly formControlName="totalPriceForItem" type="number">
       <span matTextPrefix>$&nbsp;</span>
     </mat-form-field>
   </p>
+</form>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button mat-dialog-close>Guardar</button>
+  <button mat-button (click)="getTotalForItem()">Calcular</button>
+  <button mat-button mat-dialog-close (click)="showItem()">Guardar</button>
 </mat-dialog-actions>
