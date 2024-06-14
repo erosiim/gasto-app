@@ -2,9 +2,10 @@ mat-card {
     background-color: var(--card-bg);
     color: var(--text-color);
     height: 40px;
-    width: 170px;
-    right: 10px;
+    width: 150px;
+    right: 0;
     top: 10px;
+    margin-bottom: 20px;
 }
 
 .card-contenido {

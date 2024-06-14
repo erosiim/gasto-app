@@ -1,5 +1,7 @@
 #fixedbutton {
-    position: fixed;
-    bottom: 140px;
-    right: 10px; 
+    position: relative;
+    /*bottom: 140px;*/
+    /*right: 10px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

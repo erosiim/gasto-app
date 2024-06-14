@@ -1,6 +1,18 @@
-mat-dialog-content{
+mat-dialog-content {
     overflow: visible;
 }
-mat-form-field{
+
+mat-form-field {
     width: 100%;
+}
+
+mat-dialog-buttons {
+    position: absolute;
+}
+
+.close-button {
+    top: 10px;
+    right: 10px;
+    background-color: brown;
+    position: absolute;
 }
